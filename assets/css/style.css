@@ -1,0 +1,277 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Exo', sans-serif;
+  font-size: 1em;
+  color: hsl(219, 8%, 75%);
+}
+
+h1, h2, h3 {
+  color: hsl(219, 8%, 95%);
+  font-weight: 600;
+}
+
+.container {
+}
+
+nav{
+  background-color: hsl(219, 4%, 4%);
+  position: fixed;
+  padding: 0 5%;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav h3{
+  font-size: 30px;
+}
+
+nav h3 a{
+  color: hsl(219, 8%, 95%);
+  text-decoration: none;
+}
+
+nav ul{
+  list-style: none;
+  margin: 18px 0;
+}
+
+nav ul li{
+  display: inline-block;
+  padding: 0 0 0 40px;
+}
+
+nav ul li a{
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(219, 8%, 95%);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+nav ul li a:hover{
+  color: #0059ff;
+}
+
+nav ul li a.active{
+  color: #0059ff;
+}
+
+section{
+  padding: 5% 5% 0 5%;
+}
+
+section.home{
+  background-color: hsl(219, 4%, 4%);
+  padding: 10% 5% 1.5% 5%;
+  height: 950px;
+}
+
+section.home .row{
+  margin: 0% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;}
+
+.home .txt1{
+  font-size: 35px;
+}
+
+.home .txt1 span{
+  font-weight: 700;
+}
+
+.home h1{
+  font-size: 60px;
+}
+
+.home .txt2{
+  font-size: 30px;
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  width: 15em;
+}
+
+.home .txt2 > span {
+  color: #0059ff;
+  position: absolute;
+  top: 0;
+  margin: 0 0.5rem;
+  animation: slide 8s infinite;
+  font-weight: bold;
+}
+
+@keyframes slide {
+  0% {
+    top: -1.2em;
+  }
+  14.28% {
+    top: -1.2em;
+  }
+  28.56% {
+    top: -2.4em;
+  }
+  42.84% {
+    top: -3.6em;
+  }
+  57.12% {
+    top: -4.8em;
+  }
+  71.4% {
+    top: -6em;
+  }
+  85.68% {
+    top: -7.2em;
+  }
+  100%{
+    top: -1.2em
+  }
+}
+
+.home .social{
+  margin: 30px 10px;
+}
+
+.home .social ul{
+  position:absolute;
+  /* transform: translate(-50%, -50%); */
+  margin:0;
+  padding:0;
+  display:flex;
+}
+
+.home .social ul li {
+  list-style: none;
+}
+
+.home .social ul li a{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  margin: 0 15px;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: 0.5s;
+}
+
+.home .social ul li a:hover{
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+
+.home .social ul li a .fa{
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size: 25px;
+  color: #262626;
+  transition: 0.5s;
+}
+
+.home .social ul li:nth-child(1) a:hover .fa{
+  color: #3b5998;
+}
+
+.home .social ul li:nth-child(2) a:hover .fa{
+  color: #00aced;
+}
+
+.home .social ul li:nth-child(3) a:hover .fa{
+  color: #f6424c;
+}
+
+.home .social ul li:nth-child(4) a:hover .fa{
+  color: #007bb6;
+}
+
+.home .social ul li:nth-child(5) a:hover .fa{
+  color: #e4405f;
+}
+
+.home .image img{
+  width: 350px;
+  position: relative;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  box-shadow: 15px 15px #0059ff;
+  transition: all .4s ease;
+}
+
+.home .image img:hover{
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgb(0, 89, 255);
+}
+
+.home .scroll-downs {
+  position: absolute;
+  margin: 45% auto auto auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width :34px;
+  height: 55px;
+}
+.home .mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 3px solid #0059ff;
+  border-radius: 25px;
+  opacity: 1;
+  box-sizing: content-box;
+}
+.home .scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #0059ff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+.section-title{
+  color: #0059ff;
+  text-transform: uppercase;
+}
+
+section.about{
+
+}
+
+.about{
+
+}
