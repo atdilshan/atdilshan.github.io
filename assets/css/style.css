@@ -1,5 +1,7 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
 /*=============== BASE ===============*/
 * {
@@ -23,7 +25,10 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-.container {
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 nav{
@@ -33,9 +38,6 @@ nav{
   width: 100%;
   top: 0;
   z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 nav h3{
@@ -85,9 +87,7 @@ section.home{
 
 section.home .row{
   margin: 0% 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;}
+}
 
 .home .txt1{
   font-size: 35px;
@@ -264,14 +264,117 @@ section.home .row{
 }
 
 .section-title{
-  color: #0059ff;
+  text-align: center;
+  color: #45505b;
   text-transform: uppercase;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
 }
 
-section.about{
-
+.section-title::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
 }
 
-.about{
+.section-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #0059ff;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
 
+.about .section-content{
+  margin: 3% 18%;
+}
+
+.about .left{
+  margin: 0 5% 0 0;
+}
+
+.about .left .image-card{
+  position: relative;
+  width: 280px;
+  height: 350px;
+}
+
+.about .image-card .my-image{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transform: translate(10px, 10px);
+}
+
+.about .image-card:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 255px;
+  height: 325px;
+  border: 25px solid #fff;
+  z-index: 1;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 7px 7px 21px #bdbdbd, -7px -7px 21px #ffffff;
+  background: transparent;
+}
+
+.about .image-card::before{
+  filter: url(#wavy);
+}
+
+.about .right{
+  margin: -10% 0 0 0;
+}
+
+.about .right h1{
+  font-size: 50px;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.about .right h2{
+  font-size: 22px;
+  color: #0059ff;
+  margin: -2% 0 0 0;
+}
+
+.about .right p.desc{
+  margin: 2% 0;
+  font-size: 21px;
+  line-height: 2rem;
+  font-family: "Nunito";
+  color: #4b4b4b;
+}
+
+.about .right .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-family: "Nunito";
+  font-weight: 700;
+}
+
+.about .right .box-container .box p {
+  margin: 6% 0;
+  font-size: 20px;
+  color: #4b4b4b;
+}
+
+.about .right .box-container .box p span {
+  color: #011aff;
+  text-transform: capitalize
 }
