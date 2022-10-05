@@ -1,0 +1,31 @@
+body {
+  background-color: #212121;
+}
+
+.container {
+  margin: 20% auto;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 35%;
+}
+
+.container .image {
+  width: 20%;
+}
+
+.container img {
+  width: 100%;
+}
+
+.content {
+  color: #eaeaea;
+  width: 60%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+a {
+  color: #1055c1;
+}
